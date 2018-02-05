@@ -1,0 +1,232 @@
+/*优化显示界面*/
+html, body {
+  width: 100%;
+  overflow: auto;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.canvas-content {
+  width: 100%;
+  height: 100%;
+}
+.status4{
+  margin: 0px auto 0 auto;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_547648_b91wvzo68b8olxr.eot');
+  src: url('//at.alicdn.com/t/font_547648_b91wvzo68b8olxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_547648_b91wvzo68b8olxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_547648_b91wvzo68b8olxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_547648_b91wvzo68b8olxr.svg#iconfont') format('svg');
+}
+.my-nav2{
+  width: 100%;
+  height: 50px;
+  //padding: 0;!important;
+  //margin: 0;!important;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  background: rgba(175,202,205,.6);
+  /*opacity: .2;*/
+  display: none;
+}
+
+
+//@media screen and (max-width: 500px) {
+//  .my-input {
+//    width: 75%;
+//    height: 50px;
+//  }
+//  .my-btn {
+//    height: 50px;
+//    width: 15%;
+//  }
+//  .my-a a img {
+//    width: 50px;!important;
+//    height: 50px;!important;
+//  }
+//  .my-a{
+//    margin-top: 250px;
+//    margin-left: 10px;
+//  }
+//  .i1{
+//    margin-left: 20px;
+//  }
+//  .abU{
+//    padding-left: 12%;
+//    padding-bottom: 330px;
+//    position: absolute;
+//    bottom: 100px;
+//  }
+//  .abU .my-li3 {
+//    position: relative;
+//    bottom: 120px;
+//  }
+//  #section16{
+//    height: auto;
+//    font-size: 12px;
+//    font-family: 'Helvetica';!important;
+//    font-weight: normal;!important;
+//  }
+//  #section16 .qa{
+//    padding: 0;!important;
+//    font-size: 12px;
+//    width: 100%;
+//  }
+//  #section16  .qa p{
+//    font-size: 12px;
+//    line-height: 20px;
+//    font-weight: normal;!important;
+//    letter-spacing: 0.8px;
+//  }
+//  .qa h1{
+//    color: rgb(51, 240, 240);
+//    font-weight: normal;!important;
+//    margin: 30px;
+//    font-family: Song;
+//
+//  }
+//  .my-line{
+//    transform: rotate(90deg);
+//  }
+//  #section3{
+//    height: 0;
+//  }
+//  #wrap{
+//    display: none;
+//  }
+//  .my-ul{
+//    display: none;
+//  }
+//  .abU{
+//    display: none;
+//  }
+//  .my-ul-hu{
+//    display: flex;
+//    flex-direction: column;
+//    margin-top: 20px;
+//    /*color: rgb(150,150,150);*/
+//  }
+//  .my-ul-hu li img{
+//    /*!*display: block;*!*/
+//    float: left;
+//    height: 100px;
+//    width: 100px;
+//    margin-right: 20px;
+//    padding-bottom: 10px;
+//  }
+//  .my-ul-hu li{
+//    margin: 20px auto;
+//    line-height: 18px;
+//  }
+//  .my-ul-hu li span {
+//    color: rgb(150,150,150);
+//  }
+//  .my-ull-hu{
+//    display: flex;
+//    flex-direction: column;
+//    /*margin: 0 auto;*/
+//    /*text-align: center;*/
+//    margin-top: 17%;
+//    padding: 0 10%;
+//  }
+//  .my-ull-hu p{
+//    display: inline-block;
+//    float: right;
+//    padding-right: 20px;
+//    padding-top: 30px;
+//    color: rgba(255,255,255,.75);
+//  }
+//  .my-ull-hu span{
+//    display: block;
+//    float: right;
+//    text-indent: 20px;
+//    color: rgba(255,255,255,.75);
+//    line-height: 23px;
+//  }
+//  .my-ull-hu li{
+//    margin: 5% 0;
+//    color: rgba(255,255,255,.75);
+//
+//  }
+//  .my-ull-hu li img {
+//    display: block;
+//    float: left;
+//    height: 95px;
+//    width: 90px;
+//    margin-right: 20px;
+//    padding-bottom: 10px;
+//  }
+//  .my-ull-hu div{
+//    display: inline-block;
+//  }
+//  .my-ull-hu li{
+//    clear: both;
+//  }
+//  #section8 .w .info2 {
+//    position: absolute;
+//    left: 50%;
+//    transform: translateX(-50%);
+//    font-size: 30px;
+//    color: #fff;
+//    top: 10px !important;
+//    font-weight: 600;
+//    border-bottom: 2px solid #14D6FD;
+//  }
+//  .my-nav-i{
+//    display: block;
+//  }
+//  #section0 .nav2{
+//    display: none;
+//  }
+//  #section8{
+//    height: auto;
+//  }
+//  .my-nav2{
+//    visibility: hidden;
+//  }
+//  .my-uuuu{
+//    background-color: rgba(35,78,86,.7);
+//    text-align: center;
+//    display: none;
+//    position: relative;
+//    right: 13px;
+//  }
+//  .my-uuu li{
+//    text-align: center;
+//  }
+//  .my-uuuu a{
+//    color: white;
+//    display: inline-block;
+//    border-bottom: 2px solid white;
+//    height: 50px;
+//    line-height: 50px;
+//    width: 100%;
+//    font-size: 13px;
+//
+//  }
+//  .my-aa{
+//    border: none;
+//  }
+//  .section{
+//    height: 103%;
+//  }
+//  #section11{
+//    padding-bottom: 20px;
+//    height: auto;
+//  }
+//  .qa{
+//    /*padding: 5% 10% 0 10%;*/
+//    text-align: left;
+//  }
+//  .qa p {
+//    padding: 0;
+//  }
+//}

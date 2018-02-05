@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>GAEA - 创造新世界!</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
+  <link rel="shortcut icon" href="./img1/logo.jpg"/>
+  <link rel="stylesheet" href="./css/index_mobile.css">
+  <link rel="stylesheet" href="./lib/eff/css/canvasEff.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_547648_b91wvzo68b8olxr.css">
+  <!---->
+  <!-- 引用Wilddog JavaScript SDK -->
+  <script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
+  <script>
+//    检测是否为移动端，是则跳转到移动端页面
+    if( navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+    ){
+//        alert(1);
+    }
+    else {
+//        alert(2);
+    }
+
+window.onload = function () {
+      document.body.addEventListener("touchstart",function (e) {
+        var point=e.touches[0];
+        this.startX=point.clientX;
+        this.startY=point.clientY;
+        this.isMove=false;
+      });
+      document.body.addEventListener("touchmove",function (e) {
+        var point=e.touches[0];
+        var nowX=point.clientX;
+        var nowY=point.clientY;
+        if(Math.abs(nowX-this.startX)>30||Math.abs(nowY-this.startY)>30){
+          this.isMove=true;
+        };
+      });
+      document.body.addEventListener("touchend",function (e) {
+        if(this.isMove){
+          //滑动
+          this.style.webkitTransitionDuration="2s";
+          this.style.opacity=1;
+        }else {
+          //单击
+          this.style.webkitTransitionDuration="1s";
+          // this.style.webkitTransform="rotate(360deg)";
+          //回去
+          setTimeout( ()=> {
+            this.style.webkitTransitionDuration="0s";
+            // this.style.webkitTransform="rotate(0deg)";
+          },1000)
+        }
+      })
+    }
+
+
+  </script>
+  <script></script>
+  <link rel="stylesheet" href="./css/index_m.css">
+</head>
+
+<body style="font-family: 'PingFang SC';">
+<div class="section  container-fluid  dong_fullPage" id="section0">
+  <div class="my-nav-i" style="height: 40px;width: 60px;position:fixed;right: 0;top: 20px;z-index: 9999999999999999999999999">
+    <i class="iconfont" style="font-size: 30px;z-index: 999">&#xe61e;</i>
+    <ul class="my-uuuu">
+      <li><a href="#section0">首页</a></li>
+      <li><a href="#section1">项目特点</a></li>
+      <!--<li><a href="#section3">路线图</a></li>-->
+      <li><a href="#section11">团队介绍</a></li>
+      <li><a href="#section16">常见问题</a></li>
+      <li class="my-aa"><a href="#section7">联系我们</a></li>
+    </ul>
+  </div>
+  <div class="my-nav2">
+    <ul class="nav2">
+      <li><a href="#section0">首页</a></li>
+      <li><a href="#section1">项目特点</a></li>
+      <li><a href="#section3">路线图</a></li>
+      <li><a href="#section11">团队介绍</a></li>
+      <li><a href="#section16">常见问题</a></li>
+      <li><a href="#section7">联系我们</a></li>
+      <li class="more-lan">
+        <a href="javascript:;">语言 </a>
+        <div class="more" style="line-height: 22px;top: 68px;">
+          <a class="en" href="index.html">English</a>
+          <a class="cn" href="javascript:;">中文</a>
+        </div>
+    </ul>
+  </div>
+  <div class="canvas-content ">
+    <ul class="nav1 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    </ul>
+    <div class="">
+      <div class="status2 hide">
+
+        <div class="step" style="transform:scale(.85);transform-origin: top center;">
+        </div>
+        <br>
+        <br>
+        <div class="share">
+        </div>
+      </div>
+      <div class="status3 hide">
+      </div>
+      <div class="status4 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="over "><img src="img1/logo.png" class="animated fadeInDown" alt=""></div>
+        <div class="buyBtn1">
+          <div class="buyBtnx b2"><a href="./doc/whitepaper-gaea.pdf" style="color: white;font-weight: 300;cursor: pointer">白皮书下载</a></div>
+        </div>
+        <div class="share">
+          <div class="p1">
+          </div>
+          <div class="p2" style="font-size: 16px">
+            基于区块链的全球可信贸易经济体
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="canvas" class="gradient"></div>
+</div>
+<div class="section" id="section1">
+  <div class="z">
+    <div class="my-s">
+      <div class="my-pp">
+        <p>GAEA生态特点</p>
+      </div>
+      <ul class="my-ul-hu">
+        <li>
+          <img src="img1/Oval.png" alt="">
+          <div>
+            <p>信用交易</p>
+            <span>以产业基金展开的产业链中的所有交易数据真实并有据可循，由此代币在流通过程中具备了担保属性，加大了参与者之间的信用交易可能性。</span>
+          </div>
+        </li>
+        <li>
+          <img src="img1/Oval Copy.png" alt="">
+          <div>
+            <p>便捷高效</p>
+            <span>在“智能期现生态系统”中，平台为所有大宗商品产业链参与者提供电子交易服务。</span>
+          </div>
+        </li>
+        <li>
+          <img src="img1/Oval Copy 2.png" alt="">
+          <div>
+            <p>自主决策</p>
+            <span>原材料商、加工商和流通商可以在智能期现生态系统上通过代币开展相关业务。</span>
+          </div>
+        </li>
+        <li>
+          <img src="img1/Oval Copy 3.png" alt="">
+          <div>
+            <p>应用广泛</p>
+            <span>产业基金依据区块链产生的征信和风控数据进行融资授权，通过代币进行放款、还款和开展其他金融服务。 </span>
+          </div>
+        </li>
+      </ul>
+      <ul class="my-ul">
+        <li>
+          <img src="img1/Oval.png" alt="">
+          <p>信用交易</p>
+          <span>以产业基金展开的产业链中的所有交易数据真实并有据可循，由此代币在流通过程中具备了担保属性，加大了参与者之间的信用交易可能性。</span>
+
+        </li>
+        <li>
+          <img src="img1/Oval Copy.png" alt="">
+          <p>便捷高效</p>
+          <span>在“智能期现生态系统”中，平台为所有大宗商品产业链参与者提供电子交易服务。</span>
+        </li>
+        <li>
+          <img src="img1/Oval Copy 2.png" alt="">
+          <p>自主决策</p>
+          <span>原材料商、加工商和流通商可以在智能期现生态系统上通过代币开展相关业务。</span>
+        </li>
+        <li>
+          <img src="img1/Oval Copy 3.png" alt="">
+          <p>应用广泛</p>
+          <span>产业基金依据区块链产生的征信和风控数据进行融资授权，通过代币进行放款、还款和开展其他金融服务。 </span>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="section2">
+    <div class="w clearfix">
+      <div class="detail dt-wallet">
+      </div>
+      <div class="detail dt-ico des">
+      </div>
+      <div class="detail dt-im des">
+      </div>
+      <div class="detail dt-vc des">
+      </div>
+      <div class="detail dt-trade des">
+      </div>
+      <div class="list clearfix">
+      </div>
+    </div>
+
+  </div>
+  <div class="_next">
+    <a href="#page3">
+      <img class="im1" src="./img/index_img/next.png" height="38" width="38"/>
+      <img class="im2" src="./img/index_img/next1.png" height="38" width="38"/>
+    </a>
+  </div>
+</div>
+<div class="section" id="section11" >
+  <div class="container1" >
+      <div id="section8">
+        <div class="w clearfix row">
+          <div class="info2">
+            团 队
+          </div>
+          <ul class="my-ull-hu">
+            <li>
+              <div class="team_bossInfo">
+                <img src="./img/whitepage/team_03.png" style=""/>
+                <div >
+                  <p >项目联合发起人 : 韩卫国</p>
+                </div>
+              </div>
+              <div class="team_bossDetail">从事软件、IT 服务、互联网行业多
+                年，资深业界资源。曾就职于杭州恒生电子，自主创办、
+                投资过多个互联网公司，资深投资顾问。在团队运营、
+                公司治理等方面拥有丰富的经验。</div>
+            </li>
+            <li>
+              <div class="team_bossInfo">
+                <img src="./img/whitepage/team_02.png" style=""/>
+                <div >
+                  <p >项目联合发起人 : 卢磊</p>
+                </div>
+              </div>
+              <div class="team_bossDetail">项目联合创始人。中国第一代场外期权框架师，专注
+                于量化交易平台、金融模型的设计与开发。在量化交
+                易平台、金融模型开发方面有丰富的实践经验和理论
+                知识，培养出的弟子都已成为各个期货公司场外期权
+                负责人，设计出的场外期权模型覆盖国内 80% 市场。
+                先后获得数学博士学位以及复旦大学金融工程博士后。</div>
+            </li>
+            <li>
+              <div class="team_bossInfo">
+                <img src="./img/whitepage/team_04.png" style=""/>
+                <div >
+                  <p >项目联合发起人 : 钟天春</p>
+                </div>
+              </div>
+              <div class="team_bossDetail">项目联合创始人。一直从事软件研发工作，具有 20 年
+                的软件研发经验，关注并实践技术与应用，国内最早
+                关注和研究区块链技术的资深专家。在交易系统开发、
+                统计套利模型、事件驱动、流动性分析等方面积累了
+                丰富经验。在复旦大学获软件工程硕士学位。</div>
+            </li>
+          </ul>
+          <div class="abU">
+            <ul>
+              <li>
+                <div class="i1">
+                  <img src="./img/whitepage/team_03.png" style="width:150px;height:150px;"/>
+                </div>
+                <div class="i2">
+                  韩卫国
+                </div>
+                <div class="i3">
+                  项目联合创始人
+                </div>
+                <div class="i4" style="font-weight: 100">
+                  从事软件、IT 服务、互联网行业多
+                  年，资深业界资源。曾就职于杭州恒生电子，自主创办、
+                  投资过多个互联网公司，资深投资顾问。在团队运营、
+                  公司治理等方面拥有丰富的经验。
+
+                </div>
+              </li>
+              <li style="margin-left:120px;" class="col-xs-6">
+                <div class="i1">
+                  <img src="./img/whitepage/team_02.png" style="width:150px;height:150px;"/>
+                </div>
+                <div class="i2">
+                  卢磊
+                </div>
+                <div class="i3">
+                  项目联合发起人
+                </div>
+                <div class="i4 hidden-xs-down" style="font-weight: 100">
+                  项目联合创始人。中国第一代场外期权框架师，专注
+                  于量化交易平台、金融模型的设计与开发。在量化交
+                  易平台、金融模型开发方面有丰富的实践经验和理论
+                  知识，培养出的弟子都已成为各个期货公司场外期权
+                  负责人，设计出的场外期权模型覆盖国内 80% 市场。
+                  先后获得数学博士学位以及复旦大学金融工程博士后。
+                </div>
+              </li>
+              <li style="margin-left:120px;" class="col-xs-12 my-li3">
+                <div class="i1">
+                  <img src="./img/whitepage/team_04.png" style="width:150px;height:150px;"/>
+                </div>
+                <div class="i2">
+                  钟天春
+                </div>
+                <div class="i3">
+                  项目联合创始人
+                </div>
+                <div class="i4" style="font-size: 16px;font-weight:100;letter-spacing: 0.86px;">
+                  项目联合创始人。一直从事软件研发工作，具有 20 年
+                  的软件研发经验，关注并实践技术与应用，国内最早
+                  关注和研究区块链技术的资深专家。在交易系统开发、
+                  统计套利模型、事件驱动、流动性分析等方面积累了
+                  丰富经验。在复旦大学获软件工程硕士学位。
+
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<div class="section fullpage" id="section16">
+
+  <div class="mask">
+    <div class="page_title">
+      FAQ
+    </div>
+    <div class="w clearfix">
+      <div class="qa" style="font-weight: normal">
+        <h1>为什么要做GAEA </h1>
+        <p style="font-weight:200;">1.大宗商品属于大额交易，所牵扯货款数额巨大，我国的第三方支付平台目前尚不能有效支持大宗支付；<br>
+          2.大宗商品的运输牵涉到不同层级的运输方式，国内缺少完善的安全的大宗商品电子化物流体系，跨区域运输与仓储不太便利；<br>3.目前传统金融机构融资服务局限性所致，大部分的企业融资难，阻碍运营发展。
+          GAEA 生态目前在执行的项目市场前景广阔，希望通过现有的软件体系与区块链技术紧密结合建立起产业链征信体系，以此打造一个基于区块链的可信贸易经济体。
+        </p>
+        <h1>运营区块链智能期现生态系统，GAEA的优势</h1>
+        <p style="font-weight:200;">GAEA 生态团队是一支专业的大宗商品智能期现生态系统的研发团队，目前产品已覆盖三万多家大宗商品产业客户，已形成一个完善的线下产业链社群。已具备强大的软件开发能力，丰富的期货和场外期权交易经验，深厚的金融知识及技术背景，熟悉全面的业务流程（物流、融资、点价、套利）。
+          <br>GAEA 生态团队通过对区块链技术的深入研究，关注并实践技术与应用，在交易系统开发、统计套利模型、事件驱动、流动性分析等方面积累了丰富经验，在现有软件体系结合区块链技术建立起产业链征信体系上具有先发资源。</p>
+        <h1>GAEA生态中的参与者会有哪些</h1>
+        <p style="font-weight:200;">1. 大宗商品交易方， 包括原材料商、加工流通商、贸易商，他们是大宗产业链社群的基本用户，生态系统运转的源动力。
+          <br> 2. 期现货交易相关平台开发方，智能物流、智能仓储的运转离不开为大宗商品产业链社群服务的各类机构，他们将各自的服务基于区块链技术进行开展，也在生态系统里获得更广阔的市场。<br>3. 第三方企业监管、金融机构方，区块链供应链金融平台的重要构成，应用于预付款融资、动产质押融资等。
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section dong_fullPage" id="section7">
+  <div class="page_title">
+    联系我们
+  </div>
+  <div class="w clearfix">
+    <div class="subscribe">
+
+      <form action="" class="my-from">
+        <input type="email" class="my-input" placeholder="请输入邮箱订阅动态" id="emailaddress" style="font-weight:100;">
+        <button class="my-btn" id="subscribeBTN" style="font-weight:100;">订阅</button>
+      </form>
+    </div>
+
+    <div class="footer2">
+      <div class="contect">
+        <div class="my-a ">
+          <a target="_blank" href="https://weibo.com/p/1005056473483330/home?from=page_100505&mod=TAB&is_all=1#place
+" class=" my-first-a"><img
+                  src="./img/new/contact/weibo11.png" /></a>
+          <a target="_blank" href="javascript:;" class="" onclick="alert('欢迎您添加微信公众号：gh_4cd5792a2fcf，了解项目详情！')"><img
+                  src="./img/new/contact/weixin11.png"/></a>
+          <a target="_blank" href="https://github.com/gaeaecology/gaea" class=""><img
+                  src="./img/new/contact/github11.png"/></a>
+          <a target="_blank" href="javascript:;" class="" onclick="alert('欢迎您加入qq群交流：690177162')"><img
+                  src="./img/new/contact/qq11.png"/></a>
+          <a target="_blank" href="https://t.me/joinchat/H31BRA7euPs9U3c8_IV32A" class=""><img
+                  src="./img/new/contact/weixin3.png"/></a>
+          <a class="" target="_blank" href=" https://twitter.com/Gaea2018?s=05" class="col-sm-2"><img
+                  src="./img/new/contact/twitte11.png"/></a>
+        </div>
+      </div>
+      <div class="sele clearfix">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<script>
+  console.log(window.innerHeight);
+</script>
+
+<script src="./lib/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script async="async" src="./js/jquery-ui-1.10.3.min.js"></script>
+<script src = "js/subscribe.js" ></script>
+<!--特效引用部分-->
+<script src="./lib/eff/js/three.min.js"></script>
+<script src="./lib/eff/js/canvas-renderer.js"></script>
+<script src="./lib/eff/js/3d-lines-animation.js"></script>
+<script src="./lib/eff/js/color-crl.js"></script>
+<script>
+  $(document,window).ready(function () {
+    $(document.body,window).scroll(function () {
+
+  })})
+</script>
+<script>
+  $(document).ready(function () {
+    $(".my-nav-i").click(function () {
+      $(".my-uuuu").slideToggle();
+    })
+  })
+  // $(".my-nav-i").click(function () {
+  //   alert(1);
+  // })
+</script>
+<script src="./js/index_d_m.js"></script>
+</body>
+</html>
+

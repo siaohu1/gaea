@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>GAEA - 创造新世界!</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
+    <link rel="shortcut icon" href="./img1/logo.jpg"/>
+    <link rel="stylesheet" href="./lib/jquery.fullPage.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/edit.css">
+    <link rel="stylesheet" href="./lib/eff/css/canvasEff.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <!-- 引用Wilddog JavaScript SDK -->
+    <script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
+    <style>
+        #fullPage-nav .fullPage-tooltip {
+            background-color: #F2F2F2;
+            width: 130px;
+            height: 20px;
+            font-size: 12px;
+            color: #666666;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 4px;
+        }
+
+        /*优化显示界面*/
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .section {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .canvas-content {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<!--浏览器检测-->
+<script>
+  //    检测是否为移动端，是则跳转到移动端页面
+  if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+  ){
+      location.href = 'http://gaeaec.io/index_d_m.html'
+  }
+  else {
+//        alert(2);
+  }
+</script>
+<body style="font-family: 'PingFang SC';">
+<!--index-->
+<ul id="fullpageMenu" class="my-nav2">
+    <li data-menuanchor="page1">
+        <a href='#index'>首页</a>
+    </li>
+    <li data-menuanchor="page2">
+        <a href='#projectInfo'>项目特点</a>
+    </li>
+    <li data-menuanchor="page3">
+        <a href='#roadmap'>路线图</a>
+    </li>
+    <li data-menuanchor="page4">
+        <a href='#team'>团队介绍</a>
+    </li>
+    <li data-menuanchor="page5">
+        <a href='#faq'>常见问题</a>
+    </li>
+    <li data-menuanchor="page6">
+        <a href='#contact'>联系我们</a>
+    </li>
+    <li class="more-lan">
+        <a href="javascript:;">语言 </a>
+        <div class="more" style="line-height: 22px;top: 40px;">
+            <a class="en" href="index.html">English</a>
+            <a class="cn" href="javascript:;">中文</a>
+        </div>
+    </li>
+</ul>
+<div class="section canvas-wrap" id="index">
+    <div class="canvas-content w ">
+        <div class="st st3">
+            <div class="status2 hide">
+
+                <div class="step" style="transform:scale(.85);transform-origin: top center;">
+                </div>
+                <br>
+                <br>
+                <div class="share">
+                </div>
+            </div>
+            <div class="status3 hide">
+            </div>
+            <div class="status4">
+                <div class="over"><img src="img1/logo.png" class="animated fadeInDown" alt=""></div>
+                <div class="data hide">
+                    <div class="dt current">
+                        <div class="count"><span id="st_crt">715,251,289</span> GTC</div>
+                        <div class="detail">CURRENT DISTRIBUTION</div>
+                    </div>
+                    <div class="line l1"></div>
+                    <div class="dt contributors">
+                        <div class="count"><span id="st_con">715,251,289</span></div>
+                        <div class="detail">CONTRIBUTORS</div>
+                    </div>
+                    <div class="line l2"></div>
+                    <div class="dt received">
+                        <div class="count"><span id="st_rev">1,726,349</span> ETH</div>
+                        <div class="detail">ETH RECEIVED</div>
+                    </div>
+                </div>
+                <div class="buyBtn1">
+                    <div class="buyBtnx b2"><a href="./doc/whitepaper-gaea.pdf">白皮书下载</a></div>
+                </div>
+                <div class="share">
+                    <div class="p1">
+                    </div>
+                    <div class="p2">
+                        基于区块链的全球可信贸易经济体
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="agree hide">
+
+    </div>
+    <div id="canvas" class="gradient"></div>
+</div>
+<!--projectInfo-->
+<div class="section" id="projectInfo">
+    <div class="z">
+        <div class="my-s">
+            <div class="my-pp">
+                <p>GAEA生态特点</p>
+            </div>
+            <ul class="my-ul">
+                <li>
+                    <img src="img1/Oval.png" alt="">
+                    <p>信用交易</p>
+                    <span>以产业基金展开的产业链中的所有交易数据真实并有据可循，由此代币在流通过程中具备了担保属性，加大了参与者之间的信用交易可能性。</span>
+
+                </li>
+                <li>
+                    <img src="img1/Oval Copy.png" alt="">
+                    <p>便捷高效</p>
+                    <span>在“智能期现生态系统”中，平台为所有大宗商品产业链参与者提供电子交易服务。</span>
+                </li>
+                <li>
+                    <img src="img1/Oval Copy 2.png" alt="">
+                    <p>自主决策</p>
+                    <span>原材料商、加工商和流通商可以在智能期现生态系统上通过代币开展相关业务。</span>
+                </li>
+                <li>
+                    <img src="img1/Oval Copy 3.png" alt="">
+                    <p>应用广泛</p>
+                    <span>产业基金依据区块链产生的征信和风控数据进行融资授权，通过代币进行放款、还款和开展其他金融服务。 </span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="section2">
+        <div class="w clearfix">
+            <div class="detail dt-wallet">
+            </div>
+            <div class="detail dt-ico des">
+            </div>
+            <div class="detail dt-im des">
+            </div>
+            <div class="detail dt-vc des">
+            </div>
+            <div class="detail dt-trade des">
+            </div>
+            <div class="list clearfix">
+            </div>
+        </div>
+
+    </div>
+    <div class="_next">
+        <a href="#page3">
+            <img class="im1" src="./img/index_img/next.png" height="38" width="38"/>
+            <img class="im2" src="./img/index_img/next1.png" height="38" width="38"/>
+        </a>
+    </div>
+</div>
+<!--roadmap-->
+<div class="section" id="roadmap">
+    <div id="wrap">
+        <div class="my-s1">
+            <div class="my-p1">
+                <p>GAEA生态路线图</p>
+
+            </div>
+            <div class="my-p">
+                <div class="desp-top">
+                    <p></p >
+                    <p>2018年Q2 <br>完成激励系统、大宗商品区块链平台、场外期权等系统开发</p >
+                    <p>2018年Q4 <br>系统正式投入运行 </p >
+                </div>
+
+                <div class="my-line">
+                    <img src="img1/Group 13.png" alt="">
+                </div>
+                <div class="desp-bottom">
+                    <p>2018年Q1 <br>完成底层架构设计和开发</p >
+                    <p>2018年Q3 <br>上线Beta公测版，对产业客户开放</p >
+                    <p>2019年Q1 <br>完成一万亿的平台交易规模</p >
+                </div>
+
+            </div>
+        </div>
+        <div class="ct">
+            <div class="_next">
+                <a href="#page4">
+                    <img class="im1" src="./img/index_img/next.png" height="38"
+                         width="38"/>
+                    <img class="im2" src="./img/index_img/next1.png" height="38"
+                         width="38"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--team-->
+<div class="section" id="team" >
+    <div class="container1" >
+        <div class="wa clearfix">
+            <!--第九屏-->
+            <div id="section8">
+                <div class="w clearfix row">
+                    <div class="info1">
+
+                    </div>
+                    <div class="info2">
+                        团 队
+                    </div>
+                    <div class="abU">
+                        <ul>
+                            <li>
+                                <div class="i1">
+                                    <img src="./img/whitepage/team_03.png" style="width:150px;height:150px;"/>
+                                </div>
+                                <div class="i2">
+                                    韩卫国
+                                </div>
+                                <div class="i3">
+                                    项目联合创始人
+                                </div>
+                                <div class="i4" style="font-weight: 100">
+                                    从事软件、IT 服务、互联网行业多
+                                    年，资深业界资源。曾就职于杭州恒生电子，自主创办、
+                                    投资过多个互联网公司，资深投资顾问。在团队运营、
+                                    公司治理等方面拥有丰富的经验。
+
+                                </div>
+                            </li>
+                            <li class="col-xs-6">
+                                <div class="i1">
+                                    <img src="./img/whitepage/team_02.png" style="width:150px;height:150px;"/>
+                                </div>
+                                <div class="i2">
+                                    卢磊
+                                </div>
+                                <div class="i3">
+                                    项目联合发起人
+                                </div>
+                                <div class="i4 hidden-xs-down" style="font-weight: 100">
+                                    项目联合创始人。中国第一代场外期权框架师，专注
+                                    于量化交易平台、金融模型的设计与开发。在量化交
+                                    易平台、金融模型开发方面有丰富的实践经验和理论
+                                    知识，培养出的弟子都已成为各个期货公司场外期权
+                                    负责人，设计出的场外期权模型覆盖国内 80% 市场。
+                                    先后获得数学博士学位以及复旦大学金融工程博士后。
+                                </div>
+                            </li>
+                            <li class="col-xs-12 my-li3">
+                                <div class="i1">
+                                    <img src="./img/whitepage/team_04.png" style="width:150px;height:150px;"/>
+                                </div>
+                                <div class="i2">
+                                    钟天春
+                                </div>
+                                <div class="i3">
+                                    项目联合创始人
+                                </div>
+                                <div class="i4" style="font-size: 14px;font-weight:100;letter-spacing: 0.86px;">
+                                    项目联合创始人。一直从事软件研发工作，具有 20 年
+                                    的软件研发经验，关注并实践技术与应用，国内最早
+                                    关注和研究区块链技术的资深专家。在交易系统开发、
+                                    统计套利模型、事件驱动、流动性分析等方面积累了
+                                    丰富经验。在复旦大学获软件工程硕士学位。
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--faq-->
+<div class="section" id="faq">
+    <div class="mask">
+        <div class="w clearfix">
+            <div class="qa" style="font-weight: normal">
+                <h1>为什么要做GAEA </h1>
+                <p style="font-weight:200;">1.大宗商品属于大额交易，所牵扯货款数额巨大，我国的第三方支付平台目前尚不能有效支持大宗支付；<br>
+                    2.大宗商品的运输牵涉到不同层级的运输方式，国内缺少完善的安全的大宗商品电子化物流体系，跨区域运输与仓储不太便利；<br>3.目前传统金融机构融资服务局限性所致，大部分的企业融资难，阻碍运营发展。
+                    GAEA 生态目前在执行的项目市场前景广阔，希望通过现有的软件体系与区块链技术紧密结合建立起产业链征信体系，以此打造一个基于区块链的可信贸易经济体。
+                </p>
+                <h1>运营区块链智能期现生态系统，GAEA的优势</h1>
+                <p style="font-weight:200;">GAEA 生态团队是一支专业的大宗商品智能期现生态系统的研发团队，目前产品已覆盖三万多家大宗商品产业客户，已形成一个完善的线下产业链社群。已具备强大的软件开发能力，丰富的期货和场外期权交易经验，深厚的金融知识及技术背景，熟悉全面的业务流程（物流、融资、点价、套利）。
+                    <br>GAEA 生态团队通过对区块链技术的深入研究，关注并实践技术与应用，在交易系统开发、统计套利模型、事件驱动、流动性分析等方面积累了丰富经验，在现有软件体系结合区块链技术建立起产业链征信体系上具有先发资源。</p>
+                <h1>GAEA生态中的参与者会有哪些</h1>
+                <p style="font-weight:200;">1. 大宗商品交易方， 包括原材料商、加工流通商、贸易商，他们是大宗产业链社群的基本用户，生态系统运转的源动力。
+                    <br> 2. 期现货交易相关平台开发方，智能物流、智能仓储的运转离不开为大宗商品产业链社群服务的各类机构，他们将各自的服务基于区块链技术进行开展，也在生态系统里获得更广阔的市场。<br>3. 第三方企业监管、金融机构方，区块链供应链金融平台的重要构成，应用于预付款融资、动产质押融资等。
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contact-->
+<div class="section" id="contact">
+    <div class="zz clearfix">
+        <div class="subscribe" style="margin-top:100px;">
+            <form action="">
+                <input type="email" id="emailaddress"  placeholder="请输入邮箱订阅动态" style="outline: none" >
+                <button id="subscribeBTN">订阅</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="logo">
+
+            </div>
+            <div class="contect">
+                <div class="my-a ">
+                    <a target="_blank" href="https://weibo.com/p/1005056473483330/home?from=page_100505&mod=TAB&is_all=1#place
+" class=" my-first-a"><img
+                            src="./img/new/contact/weibo11.png" /></a>
+                    <a target="_blank" href="javascript:;" class="" onclick="alert('欢迎您添加微信公众号：gh_4cd5792a2fcf，了解项目详情！')"><img
+                            src="./img/new/contact/weixin11.png"/></a>
+                    <a target="_blank" href="https://github.com/gaeaecology/gaea" class=""><img
+                            src="./img/new/contact/github11.png"/></a>
+                    <a target="_blank" href="javascript:;" class="" onclick="alert('欢迎您加入qq群交流：690177162')"><img
+                            src="./img/new/contact/qq11.png"/></a>
+                    <a target="_blank" href="https://t.me/joinchat/H31BRA7euPs9U3c8_IV32A" class=""><img
+                            src="./img/new/contact/weixin3.png"/></a>
+                    <a class="" target="_blank" href=" https://twitter.com/Gaea2018?s=05" class="col-sm-2"><img
+                            src="./img/new/contact/twitte11.png"/></a>
+                </div>
+            </div>
+            <div class="sele clearfix">
+
+            </div>
+            <!-- <div class="cpr">
+                Copyright &copy; NEO Team 2014-2018 NEO Contributors
+            </div> -->
+        </div>
+    </div>
+
+</div>
+<!--javascript-->
+<script src="./lib/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script async="async" src="./js/texiao.js"></script>
+<script async="async" src="./js/jquery-ui-1.10.3.min.js"></script>
+<script src="./js/jquery.fullPage.min.js"></script>
+<script src = "js/subscribe.js" ></script>
+<!--滑动插件部分-->
+<script>
+  $(document).ready(function () {
+    $.fn.fullpage({
+      anchors:['page1','page2','page3','page4','page5','page6'],
+      navigation: true,
+      lpFlag: 0,
+      navigationTooltips: ["首页", "项目特点", "发展路线", "团队介绍", "关于GAEA", "联系我们",],
+      menu:'#fullpageMenu',
+      // paddingTop:'50px',
+      afterLoad: function (anchorLink, index) {
+        if (index == 2) {
+          $(".my-ul li").stop().animate(2000,function () {
+            // $(".my-ul li").addClass("animated bounceInDown");
+          })
+        }
+        if (index == 3) {
+          $(".desp-top").stop().animate({right:100,left:100,opacity:1},1000,function () {
+            $(".desp-bottom p").addClass("animated fadeInLeft");
+          }
+          );
+        }
+        if (index == 4) {
+          $(".i4").stop().animate(2000,function(){
+            // $(".i1").addClass("animated flash");
+          })
+        }
+        if (index == 5) {
+          $(".qa").stop().animate(2000,function(){
+            // $(".qa").addClass("animated fadeInLeft");
+          })
+        }
+        if (index == 6){
+          $(".my-a").stop().animate(2000,function(){
+            $(".my-a").addClass("animated pulse");
+          })
+        }
+      }
+
+  })});
+
+
+</script>
+<script>
+  reset();
+  window.onresize = reset;
+
+  function reset() {
+    var ch = $(window).height();
+    if (ch < 600) {
+      $("._next").hide();
+      reset(600);
+    } else if (ch < 700) {
+      $("._next").hide();
+      reset(ch);
+    } else if (ch < 710) {
+      reset(ch);
+      $("._next").hide();
+    } else if (ch < 763) {
+      $("._next").show();
+      $("._next").css({top: "93%"});
+    }
+    else {
+      $("._next").show();
+      $("._next").css({top: 750 * 0.93 + "px"});
+    }
+
+    if (ch < 600) {
+      $("#index .w").css({"transform": "scale(0.85)"})
+      $("#section9 .w").css({"transform": "scale(0.85)"})
+    } else if (ch < 728) {
+      $("#index .w").css({"transform": "scale(" + ((ch - 600) / 128 * 0.15 + 0.85) + ")"})
+      $("#section9 .w").css({"transform": "scale(" + ((ch - 600) / 128 * 0.15 + 0.85) + ")"})
+    } else {
+      $("#index .w").css({"transform": "scale(1)"})
+      $("#section9 .w").css({"transform": "scale(1)"})
+    }
+
+    function reset(ch) {
+      // 第二页
+      $("#projectInfo .round").css({"top": (ch - 600) / 100 * 20 + 75 + "px"});
+
+      // 第三页
+      cTop("#section2 .detail .logo", 300, 300 - 55);
+      cTop("#section2 .detail .url", 110, 110 - 55);
+      cTop("#section2 .detail .title", 188, 188 - 55);
+      cTop("#section2 .detail .info", 283, 283 - 55);
+      cTop("#section2 .list", 552, 552 - 55);
+
+
+      // 第五页
+      cTop("#section4 .title", 50, 50 - 30);
+      cTop("#section4 .st1", 190, 190 - 60);
+      cTop("#section4 .st2", 330, 330 - 60);
+      cTop("#section4 .st3", 484, 484 - 60);
+      cTop("#section4 .info", 610, 610 - 70);
+
+      // 第六页
+      cTop("#section5 .title", 60, 60 - 30);
+      cTop("#section5 .info", 154, 154 - 50);
+      cTop("#section5 .url", 253, 253 - 50);
+      cTop("#section5 .line", 283, 283 - 50);
+      cTop("#section5 .route", 360, 360 - 60);
+
+      // 第七页
+      $("#section6 .title").css({"top": (ch - 600) / 100 * 35 + 0 + "px"});
+      $("#section6 .sel >div").css({"top": (ch - 600) / 100 * 75 + 135 + "px"});
+      $("#section6 .line1, #section6 .line2").css({"top": (ch - 600) / 100 * 75 + 200 + "px"});
+      $("#section6 .container").css({"top": (ch - 600) / 100 * 75 + 282 + "px"});
+      $("#section6 .tri").css({"top": (ch - 600) / 100 * 75 + 267 + "px"});
+      $("#section6 .fu").css({"top": (ch - 600) / 100 * 75 + 558 + "px"});
+
+      // 第八页
+      $("#contact .w ").css({"top": (ch - 600) / 100 * 40 + "px"});
+      $("#section8 .title").css({"top": (ch - 600) / 100 * 35 + 0 + "px"});
+      $("#section8 .sel >div").css({"top": (ch - 600) / 100 * 75 + 135 + "px"});
+      $("#section8 .line1, #section6 .line2").css({"top": (ch - 600) / 100 * 75 + 200 + "px"});
+      $("#section8 .container").css({"top": (ch - 600) / 100 * 75 + 282 + "px"});
+      $("#section8 .tri").css({"top": (ch - 600) / 100 * 75 + 267 + "px"});
+      $("#section8 .fu").css({"top": (ch - 600) / 100 * 75 + 558 + "px"});
+
+
+
+      $("#roadmap .w ").css({"top": (ch - 600) / 100 * 40 - 40 + "px"});
+
+      // 第九页
+      cTop("#section8 .info1", 41, 10);
+      cTop("#section8 .info2", 73, 35);
+      cTop("#section8 .abU", 175, 120);
+
+      // 第10页
+      $("#projectInfo2 .w").css({"top": ((ch - 600) / 100 * 60 - 60) + "px"});
+
+      // 第11页
+      $("#projectInfo0 .info1").css({"top": (ch - 600) / 100 * 45 + 15 + "px"});
+      $("#projectInfo0 .info2").css({"top": (ch - 600) / 100 * 80 + 160 + "px"});
+
+
+      function cTop(sel, fr, to) {
+        $(sel).css({"top": (ch - 600) / 100 * ( fr - to ) + to + "px"});
+      }
+    }
+  }
+</script>
+<!--特效引用部分-->
+<script src="./lib/eff/js/three.min.js"></script>
+<script src="./lib/eff/js/canvas-renderer.js"></script>
+<script src="./lib/eff/js/3d-lines-animation.js"></script>
+<script src="./lib/eff/js/color_20170901_1701.js"></script>
+</body>
+</html>
+
